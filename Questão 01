@@ -1,0 +1,27 @@
+def pertence_fibonacci(numero):
+    # Inicializando os primeiros números da sequência de Fibonacci
+    fib_a, fib_b = 0, 1
+
+    # Verifica se o número é 0 ou 1, que já pertencem à sequência
+    if numero == 0 or numero == 1:
+        return f"O número {numero} pertence à sequência de Fibonacci."
+
+    # Gera a sequência de Fibonacci e verifica se o número informado pertence a ela
+    while fib_b <= numero:
+        if fib_b == numero:
+            return f"O número {numero} pertence à sequência de Fibonacci."
+        fib_a, fib_b = fib_b, fib_a + fib_b
+
+    return f"O número {numero} NÃO pertence à sequência de Fibonacci."
+
+# Defina o número a ser verificado diretamente no código
+numero_informado = 21  # Você pode alterar esse valor para qualquer número
+
+# Ou permita que o usuário informe o número
+# numero_informado = int(input("Informe um número: "))
+
+# Verificar se o número informado pertence à sequência de Fibonacci
+resultado = pertence_fibonacci(numero_informado)
+
+# Exibe o resultado
+print(resultado)
