@@ -1,0 +1,22 @@
+def contar_letra_a(texto):
+    contador = 0
+    
+    # Itera por cada caractere na string
+    for char in texto:
+        if char.lower() == 'a':  # Verifica se é 'a' ou 'A'
+            contador += 1
+            
+    return contador
+
+# String pode ser fornecida diretamente no código ou por entrada do usuário
+texto_informado = "Esta é uma string de exemplo com algumas letras A e a."
+# Ou para entrada do usuário, descomente a linha abaixo
+# texto_informado = input("Informe uma string para verificar a letra 'a': ")
+
+# Conta as ocorrências da letra 'a' e exibe o resultado
+quantidade = contar_letra_a(texto_informado)
+
+if quantidade > 0:
+    print(f"A letra 'a' aparece {quantidade} vez(es) na string.")
+else:
+    print("A letra 'a' não está presente na string.")
